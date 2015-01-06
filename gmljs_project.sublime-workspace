@@ -27,7 +27,7 @@
 			"file": "obj_player.js",
 			"settings":
 			{
-				"buffer_size": 378,
+				"buffer_size": 296,
 				"line_ending": "Windows"
 			}
 		},
@@ -145,8 +145,8 @@
 						"selection":
 						[
 							[
-								675,
-								675
+								1933,
+								1933
 							]
 						],
 						"settings":
@@ -156,7 +156,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 810.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -173,8 +173,8 @@
 						"selection":
 						[
 							[
-								194,
-								194
+								151,
+								151
 							]
 						],
 						"settings":
@@ -194,15 +194,15 @@
 					"file": "obj_player.js",
 					"settings":
 					{
-						"buffer_size": 378,
+						"buffer_size": 296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								199,
-								199
+								247,
+								247
 							]
 						],
 						"settings":
