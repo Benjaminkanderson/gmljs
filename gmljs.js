@@ -3,6 +3,9 @@
 
 objects = [];
 instances = [];
+vk_left = 37;
+vk_right = 39;
+keyboard = {};
 
 // Object creation function
 function object_create( name ) {
@@ -34,6 +37,32 @@ function instance_create( x, y, object ) {
     return obj;
 }
 
+function keyboard_check(key) {
+    return keyboard[ key ];
+}
+
+function attachKeboardEvents() {
+    // Keyboard event
+    document.addEventListener('keydown', function(event) {
+        console.log( "A key is being pressed." );
+        (event.keyCode == 37) ? keyboard[ vk_left ];
+        (event.keyCode == 39) ? keyboard[ vk_right ];
+    });
+
+    /*
+    // Keyboard Pressed event
+    document.addEventListener('keypress', function(event) {
+        (event.keyCode == 37) ? keyboard_key[ vk_left ] = true: keyboard_key[ vk_left ] = false;
+        (event.keyCode == 39) ? keyboard_key[ vk_right ] = true: keyboard_key[ vk_right ] = false;
+    });
+
+    // Keyboard Released event
+    document.addEventListener('keyup', function(event) {
+        (event.keyCode == 37) ? keyboard_key[ vk_left ] = true: keyboard_key[ vk_left ] = false;
+        (event.keyCode == 39) ? keyboard_key[ vk_right ] = true: keyboard_key[ vk_right ] = false;
+    });*/
+}
+
 function handleCreateEvents() {
     // Handle the create event
     for (var i=0; i<objects.length; i++) {
@@ -60,5 +89,8 @@ function gameLoop() {
 
 function run( fps ) {
     handleCreateEvents();
+    attachKeboardEvents();
     setInterval( gameLoop, 1000/fps );
+    keyboard[ vk_right ] = false;
+    keyboard[ vk_left ] = false;
 }
