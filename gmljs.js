@@ -50,7 +50,7 @@ function gameLoop() {
     handleOngoingEvents();
 }
 
-handleCreateEvents();
 function run( fps ) {
+    handleCreateEvents();
     setInterval( gameLoop, 1000/fps );
 }
