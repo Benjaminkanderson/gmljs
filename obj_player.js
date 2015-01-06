@@ -3,7 +3,9 @@ object_create( "obj_player" );
 
 // Create Event
 obj_player.create_event = function() {
+	var x = this.x;
 	console.log( "Create Event" );
+	console.log( x );
 }
 
 // Step Event

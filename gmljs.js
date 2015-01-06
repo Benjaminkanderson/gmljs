@@ -12,6 +12,7 @@ function object_create( name ) {
     window[ name ] = function() {
         this.x = 0;
         this.y = 0;
+        this.name = name;
     };
     
     window[ name ].create_event = function() {};
@@ -66,20 +67,20 @@ function attachKeboardEvents() {
 
 function handleCreateEvents() {
     // Handle the create event
-    for (var i=0; i<objects.length; i++) {
-        var obj = objects[ i ];
-        if ( obj.create_event ) {
-            obj.create_event.call( obj );
+    for (var i=0; i<instances.length; i++) {
+        var instance = instances[ i ];
+        if ( instance.create_event ) {
+            instance.create_event.call( instance );
         }
     }
 };
 
 function handleOngoingEvents() {
     // Handle the step event
-    for (var i=0; i<objects.length; i++) {
-        var obj = objects[ i ];
-        if ( obj.step_event ) {
-            obj.step_event.call( obj );
+    for (var i=0; i<instances.length; i++) {
+        var instance = instances[ i ];
+        if ( instance.step_event ) {
+            instance.step_event.call( instance );
         }
     }
 };
