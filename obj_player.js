@@ -4,5 +4,5 @@ obj_player.create_event = function() {
 	console.log( "Create Event" );
 }
 obj_player.step_event = function() {
-	console.log( "Step Event" );
+	console.log( x );
 }

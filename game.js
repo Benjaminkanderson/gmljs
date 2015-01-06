@@ -1,3 +1,4 @@
 // Start the game
-instance_create( 0, 0, obj_player );
-run( 30 );
+var i = instance_create( 0, 0, obj_player );
+console.log(i.x);
+run( 1 );
