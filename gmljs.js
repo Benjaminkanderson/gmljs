@@ -17,12 +17,12 @@ function object_create( name ) {
     window[ name ].create_event = function() {};
     window[ name ].step_event = function() {};
     objects.push( window[ name ] );
-}
+};
 
 //script creation function
 function script_create( name, func ) {
     window[ name ] = func;
-}
+};
 
 function instance_create( x, y, object ) {
     if (object) {
@@ -35,18 +35,19 @@ function instance_create( x, y, object ) {
     }
 
     return obj;
-}
+};
 
 function keyboard_check(key) {
-    return keyboard[ key ];
-}
+    var result = keyboard[ key ];
+    keyboard[ key ] = false;
+    return result;
+};
 
 function attachKeboardEvents() {
     // Keyboard event
     document.addEventListener('keydown', function(event) {
-        console.log( "A key is being pressed." );
-        (event.keyCode == 37) ? keyboard[ vk_left ];
-        (event.keyCode == 39) ? keyboard[ vk_right ];
+        if ( event.keyCode == 37 ) keyboard[ vk_left ] = true;
+        if ( event.keyCode == 39 ) keyboard[ vk_right ] = true;
     });
 
     /*
@@ -61,7 +62,7 @@ function attachKeboardEvents() {
         (event.keyCode == 37) ? keyboard_key[ vk_left ] = true: keyboard_key[ vk_left ] = false;
         (event.keyCode == 39) ? keyboard_key[ vk_right ] = true: keyboard_key[ vk_right ] = false;
     });*/
-}
+};
 
 function handleCreateEvents() {
     // Handle the create event
@@ -71,7 +72,7 @@ function handleCreateEvents() {
             obj.create_event.call( obj );
         }
     }
-}
+};
 
 function handleOngoingEvents() {
     // Handle the step event
@@ -81,16 +82,14 @@ function handleOngoingEvents() {
             obj.step_event.call( obj );
         }
     }
-}
+};
 
 function gameLoop() {
     handleOngoingEvents();
-}
+};
 
 function run( fps ) {
     handleCreateEvents();
     attachKeboardEvents();
     setInterval( gameLoop, 1000/fps );
-    keyboard[ vk_right ] = false;
-    keyboard[ vk_left ] = false;
-}
+};

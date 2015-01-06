@@ -11,7 +11,7 @@
 			"file": "gmljs.js",
 			"settings":
 			{
-				"buffer_size": 1387,
+				"buffer_size": 2433,
 				"line_ending": "Windows"
 			}
 		},
@@ -19,7 +19,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 293,
+				"buffer_size": 368,
 				"line_ending": "Windows"
 			}
 		},
@@ -27,7 +27,7 @@
 			"file": "obj_player.js",
 			"settings":
 			{
-				"buffer_size": 189,
+				"buffer_size": 342,
 				"line_ending": "Windows"
 			}
 		},
@@ -35,7 +35,7 @@
 			"file": "game.js",
 			"settings":
 			{
-				"buffer_size": 90,
+				"buffer_size": 65,
 				"line_ending": "Windows"
 			}
 		}
@@ -130,7 +130,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -138,15 +138,15 @@
 					"file": "gmljs.js",
 					"settings":
 					{
-						"buffer_size": 1387,
+						"buffer_size": 2433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								726,
-								726
+								832,
+								832
 							]
 						],
 						"settings":
@@ -156,7 +156,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -166,15 +166,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 293,
+						"buffer_size": 368,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								293,
-								293
+								108,
+								108
 							]
 						],
 						"settings":
@@ -194,15 +194,15 @@
 					"file": "obj_player.js",
 					"settings":
 					{
-						"buffer_size": 189,
+						"buffer_size": 342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								189,
-								189
+								163,
+								163
 							]
 						],
 						"settings":
@@ -220,15 +220,15 @@
 					"file": "game.js",
 					"settings":
 					{
-						"buffer_size": 90,
+						"buffer_size": 65,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								65,
+								65
 							]
 						],
 						"settings":
