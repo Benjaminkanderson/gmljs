@@ -2,6 +2,7 @@
 // javascript gml interpreter
 
 objects = [];
+instances = [];
 
 // Object creation function
 function object_create( name ) {
@@ -12,6 +13,7 @@ function object_create( name ) {
     
     window[ name ].create_event = function() {};
     window[ name ].step_event = function() {};
+    objects.push( window[ name ] );
 }
 
 //script creation function
@@ -20,9 +22,15 @@ function script_create( name, func ) {
 }
 
 function instance_create( x, y, object ) {
-    var obj = new object();
-    obj.create_event = object.create_event;
-    obj.create_event.call( obj );
+    if (object) {
+        var obj = new object();
+        obj.create_event = object.create_event;
+        obj.step_event = object.step_event;
+        instances.push( obj );
+    } else {
+        obj = null;
+    }
+
     return obj;
 }
 
